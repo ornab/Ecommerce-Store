@@ -7,29 +7,19 @@
 
         <div class="row">
 
-          <!-- Category Here -->
-            <?php include(TEMPLATE_FRONT . DS . "side_nav.php"); ?>
+            <?php include(TEMPLATE_FRONT .DS. "side_nav.php"); ?>
 
             <div class="col-md-9">
 
-                <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        
-                        <?php include(TEMPLATE_FRONT . DS . "slider.php"); ?>
-                   
-                    </div>
-
-                </div>
+               <?php include(TEMPLATE_FRONT .DS. "slider.php"); ?>
 
                 <div class="row">
-                    
-                    
-                      <?php  get_products(); ?>
-                      
-                   
 
-                   </div>   
+                <?php get_products(); ?>
+
+                    
+                   
+            </div>
 
             </div>
 
@@ -39,4 +29,5 @@
     <!-- /.container -->
 
 <?php include(TEMPLATE_FRONT .DS. "footer.php"); ?>
+
     

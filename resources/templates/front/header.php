@@ -15,10 +15,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    
-    
-    
-    
     <link href="css/shop-homepage.css" rel="stylesheet">
     
     <link href="css/styles.css" rel="stylesheet">
@@ -36,8 +32,6 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        
-         <?php include(TEMPLATE_FRONT .DS. "top_nav.php"); ?>
-        
+        <?php include(TEMPLATE_FRONT .DS. "top_nav.php"); ?>
         <!-- /.container -->
     </nav>

@@ -2,14 +2,8 @@
     <p class="lead">Shop Name</p>
     <div class="list-group">
         
-        <?php 
-            
-        get_categories();
+        
+        <?php get_category(); ?>
     
-        
-        
-        ?>
-        
-        
-     </div>
+    </div>
 </div>

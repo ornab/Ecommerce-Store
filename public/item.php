@@ -1,29 +1,30 @@
 <?php require_once("../resources/config.php"); ?>
 
-<?php include(TEMPLATE_FRONT . DS . "header.php"); ?>
-
- 
+<?php include(TEMPLATE_FRONT .DS. "header.php"); ?>
 
     <!-- Page Content -->
 <div class="container">
 
        <!-- Side Navigation -->
-
+      
+    <?php include(TEMPLATE_FRONT .DS. "side_nav.php"); ?>
     
     
-<?php include(TEMPLATE_FRONT . DS . "side_nav.php"); ?>
-
-<?php 
- 
-$query = query(" SELECT * FROM products WHERE product_id = 1" . escape_string($_GET['id']) . " " );
-confirm($query);
-
-while ($row = fetch_array($query)):
+    <?php
+        $query = query("SELECT * FROM products WHERE product_id= " . escape_string($_GET['id']) . " " );
+        confirm( $query);
     
     
-?>
+        while($row=fetch_array($query)):
+       
     
     
+    
+    ?>
+    
+    
+    
+             
 
 <div class="col-md-9">
 
@@ -32,7 +33,7 @@ while ($row = fetch_array($query)):
 <div class="row">
 
     <div class="col-md-7">
-       <img class="img-responsive" src="http://placehold.it/700x600" alt="">
+       <img class="img-responsive" src="<?php echo $row['product_image']?>" alt="">
 
     </div>
 
@@ -42,9 +43,9 @@ while ($row = fetch_array($query)):
          
 
     <div class="caption-full">
-        <h4><a href="#"><?php echo $row['product_title']; ?></a> </h4>
+        <h4><a href="#"><?php echo $row['product_title'] ?></a> </h4>
         <hr>
-        <h4 class=""><?php echo "&#36;" . $row['product_price']; ?></h4>
+        <h4 class=""><?php echo "&#36;". $row['product_price'] ?></h4>
 
     <div class="ratings">
      
@@ -58,7 +59,8 @@ while ($row = fetch_array($query)):
         </p>
     </div>
           
-        <p><?php echo $row['product_desc']; ?>
+        <p> <?php echo $row['product_desc'] ?> </p>
+
    
     <form action="">
         <div class="form-group">
@@ -98,11 +100,12 @@ while ($row = fetch_array($query)):
 
 <p></p>
            
-    <p><?php echo $row['product_description']; ?></p> 
-        
-     <p><?php echo $row['product_description']; ?></p> 
-        
-     <p><?php echo $row['product_description']; ?></p>     
+    <p><?php echo $row['product_description'] ?> </p>
+
+    <p><?php echo $row['product_description'] ?></p>
+
+
+     
 
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">
@@ -207,11 +210,24 @@ while ($row = fetch_array($query)):
 
 
 
-</div><!-- col-md-9 ends here -->
+</div>
     
     <?php endwhile; ?>
+    
+    
 
 </div>
     <!-- /.container -->
 
+    
+
+
+
+
 <?php include(TEMPLATE_FRONT .DS. "footer.php"); ?>
+
+
+
+    <!-- /.container -->
+
+    
