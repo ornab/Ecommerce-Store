@@ -11,14 +11,17 @@
     
     
     <?php
+       
+        
         $query = query("SELECT * FROM products WHERE product_id= " . escape_string($_GET['id']) . " " );
         confirm( $query);
     
-    
+     
+            
         while($row=fetch_array($query)):
        
     
-    
+        
     
     ?>
     
@@ -64,7 +67,7 @@
    
     <form action="">
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="ADD TO CART">
+            <a href="item.php?add=<?php $row['product_id']?>" class="btn btn-primary"> Add to cart </a>
         </div>
     </form>
 
